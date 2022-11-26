@@ -1,0 +1,20 @@
+
+package tugasmodul1;
+
+/**
+ *
+ * @author SARSSXD
+ */
+public class Percobaan2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]){
+System.out.print("Nama Buah :\t\n");
+System.out.print("1. Manggisa\b\n");
+System.out.print("2. Semangka\n");
+System.out.print("3. Durian\n");
+System.out.print("4. Salak\n");
+}
+}
