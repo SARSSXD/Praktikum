@@ -1,0 +1,30 @@
+package kuispraUAS;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import javax.swing.*;
+
+public class FormatInput {
+
+    public static void main(String[] args) {
+        int a = Integer.parseInt(JOptionPane.showInputDialog("Input a "));
+        System.out.println("Output = "+ a);
+        BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in));
+        int b;
+        try {
+            System.out.print("Input b:");
+            b = Integer.parseInt(dataIn.readLine());
+            System.out.println("Output = "+b);
+        } catch (IOException e) {
+            System.out.println("Error!");
+        }
+        
+        Scanner sc = new Scanner(System.in);  // Create a Scanner object
+        System.out.print("Input c:");
+
+        int c = sc.nextInt();  // Read user input
+        System.out.println("Output = " + c);  // Output user input
+    }
+}
