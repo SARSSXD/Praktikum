@@ -8,9 +8,9 @@ import javax.swing.JOptionPane;
 public class ProgramStar {
 
     public static void main(String[] args) {
-        int n = Integer.parseInt(JOptionPane.showInputDialog("Masukkan Angka Yang Anda Inginkan : "));
+        int n = 5;//Integer.parseInt(JOptionPane.showInputDialog("Masukkan Angka Yang Anda Inginkan : "));
 
-        //Kotak bolong
+        //punya Lana
         for (int i = 1; i <= 5; i++) {
             for (int j = 1; j <= 5; j++) {
                 if (i == 1 || i == 5 || j == 1 || j == 5 || i == 3 && j == 3) {
@@ -22,39 +22,37 @@ public class ProgramStar {
             System.out.println();
         }
 
-        //KWOTAK PALING salah gaes
-        for (int j = 0; j < n + 10; j++) {
-            System.out.print("*");
-        }
-        System.out.println("");
-        for (int i = 1; i <= n; i++) {
-            System.out.print("*");
-
-            for (int j = 1; j <= i; j++) {
-                System.out.print(" ");
-            }
-            for (int k = n; k >= i; k--) {
-                System.out.print(" ");
-            }
-            if (i == 3) {
-                System.out.print("*");
-            } else {
-                System.out.print(" ");
-            }
-            for (int j = 1; j <= i; j++) {
-                System.out.print(" ");
-            }
-            for (int k = n; k >= i; k--) {
-                System.out.print(" ");
-            }
-            System.out.print("*");
-            System.out.println("");
-        }
-        for (int j = 0; j < n + 10; j++) {
-            System.out.print("*");
-        }
-
-        System.out.println("\n");
+//         //KWOTAK PALING salah gaes
+//         for (int j = 0; j < n + 10; j++) {
+//             System.out.print("*");
+//         }
+//         System.out.println("");
+//         for (int i = 1; i <= n; i++) {
+//             System.out.print("*");
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int k = n; k >= i; k--) {
+//                 System.out.print(" ");
+//             }
+//             if (i == 3) {
+//                 System.out.print("*");
+//             } else {
+//                 System.out.print(" ");
+//             }
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int k = n; k >= i; k--) {
+//                 System.out.print(" ");
+//             }
+//             System.out.print("*");
+//             System.out.println("");
+//         }
+//         for (int j = 0; j < n + 10; j++) {
+//             System.out.print("*");
+//         }
+//         System.out.println("\n");
 
         //macem-macem segitiga
         for (int i = 1; i <= n; i++) {
@@ -103,6 +101,15 @@ public class ProgramStar {
             System.out.println("");
         }
 
+        //punya Arip
+        System.out.println("*");
+        for (int i = 1; i <= n-1; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("!");
+            }
+            System.out.print("*\n");
+        }
+        
         // Huruf N
         System.out.println("");
         for (int i = 0; i < n; i++) {
