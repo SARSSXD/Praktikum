@@ -1,10 +1,6 @@
 
 import javax.swing.JOptionPane;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 /**
  *
  * @author SARSSXD
@@ -14,8 +10,20 @@ public class ProgramStar {
     public static void main(String[] args) {
         int n = Integer.parseInt(JOptionPane.showInputDialog("Masukkan Angka Yang Anda Inginkan : "));
 
-        //KWOTAK PALING
-        for (int j = 0; j < n + 3; j++) {
+        //Kotak bolong
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5 || i == 3 && j == 3) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
+        //KWOTAK PALING salah gaes
+        for (int j = 0; j < n + 10; j++) {
             System.out.print("*");
         }
         System.out.println("");
@@ -28,12 +36,24 @@ public class ProgramStar {
             for (int k = n; k >= i; k--) {
                 System.out.print(" ");
             }
+            if (i == 3) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = n; k >= i; k--) {
+                System.out.print(" ");
+            }
             System.out.print("*");
             System.out.println("");
         }
-        for (int j = 0; j < n + 3; j++) {
+        for (int j = 0; j < n + 10; j++) {
             System.out.print("*");
         }
+
         System.out.println("\n");
 
         //macem-macem segitiga
