@@ -8,12 +8,16 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author LAB PROGRAMMING 1
+ * @author SARSSXD
  */
 public class UAS_Kautsar {
 
     static String input(String a) {
         return a = JOptionPane.showInputDialog(a);
+    }
+
+    static Boolean cek(String a) {
+        return "Rent".equals(a);
     }
 
     static String idenditas() {
@@ -37,29 +41,29 @@ public class UAS_Kautsar {
         for (int i = 0; i < n; i++) {
             System.out.println("Mobil ke-" + (i + 1));
             for (int j = 0; j < 4; j++) {
-                if (j == 0) {
-                    dataMobil[i][j] = input("Jenis Merk Mobil ke-" + (i + 1));
-                    System.out.println("Jenis Mobil : " + dataMobil[i][j]);
-                } else if (j == 1) {
-                    dataMobil[i][j] = input("Tipe Mobil (Manual / Automatic) ke-" + (i + 1));
-                    System.out.println("Tipe Mobil : " + dataMobil[i][j]);
-                } else if (j == 2) {
-                    dataMobil[i][j] = input("Harga Sewa Mobil ke-" + (i + 1));
-                    System.out.println("Harga Sewa Mobil :" + dataMobil[i][j]);
-                } else {
-                    dataMobil[i][j] = input("Status Sewa (Ready / Rent)Mobil ke-" + (i + 1));
-                    System.out.println("Status Sewa Mobil :" + dataMobil[i][j]);
+                switch (j) {
+                    case 0:
+                        dataMobil[i][j] = input("Jenis Merk Mobil ke-" + (i + 1));
+                        System.out.println("Jenis Mobil : " + dataMobil[i][j]);
+                        break;
+                    case 1:
+                        dataMobil[i][j] = input("Tipe Mobil (Manual / Automatic) ke-" + (i + 1));
+                        System.out.println("Tipe Mobil : " + dataMobil[i][j]);
+                        break;
+                    case 2:
+                        dataMobil[i][j] = input("Harga Sewa Mobil ke-" + (i + 1));
+                        System.out.println("Harga Sewa Mobil :" + dataMobil[i][j]);
+                        break;
+                    default:
+                        dataMobil[i][j] = input("Status Sewa (Ready / Rent)Mobil ke-" + (i + 1));
+                        System.out.println("Status Sewa Mobil :" + dataMobil[i][j]);
+                        break;
                 }
-            }
-            System.out.println("=========================");
-        }
-        String cari = input("Cari Mobil dengan Status(Rent/Ready)");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (cari.equals(dataMobil[i][j])) {
+                if (cek(dataMobil[i][j])) {
                     jmlRent++;
                 }
             }
+            System.out.println("=========================");
         }
         System.out.println("Jumlah Mobil Dengan Status Sewa Rent = " + jmlRent);
 
