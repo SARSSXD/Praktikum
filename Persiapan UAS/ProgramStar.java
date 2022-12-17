@@ -138,7 +138,7 @@ public class ProgramStar {
         System.out.println("");
         for (int i = 0; i < n; i++) {
             for (int j = 1; j <= n; j++) {
-                if (j == n - i || j == i + 1 || j == 1 || j == 5) {
+                if (j == n - i || j == i + 1 ) {
                     System.out.print(" *");
 
                 } else {
@@ -149,6 +149,21 @@ public class ProgramStar {
             System.out.println(" ");
         }
 
+        System.out.println("");
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (j == n - i) {
+                    System.out.print(" /");
+                } else if (i == 0 || i == 4) {
+                    System.out.print(" *");
+                } else {
+                    System.out.print("  ");
+                }
+
+            }
+            System.out.println(" ");
+        }
+        
         System.out.println("");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
